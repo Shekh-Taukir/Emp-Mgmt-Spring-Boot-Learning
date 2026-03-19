@@ -2,6 +2,7 @@ package com.learnSpringBootCode.Hospital_Mgmt_SB.services.impl;
 
 import com.learnSpringBootCode.Hospital_Mgmt_SB.dto.EmployeeDTO;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.entities.Employee;
+import com.learnSpringBootCode.Hospital_Mgmt_SB.exceptions.ResourceNotFoundException;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.repositories.EmployeeRepository;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.services.EmployeeService;
 import lombok.AllArgsConstructor;
@@ -22,12 +23,26 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final EmployeeRepository employeeRepository;
     private final ModelMapper modelMapper;
 
-    //Internal Methods
+    // ---------------------------------------Internal Functions
+
+    /*
+    //this function is already covered under throwResourceNotFoundException function
     public boolean isEmployeeExistsById(Long empId){
         if(employeeRepository.existsById(empId))
             return true;
+
         return false;
     }
+     */
+
+    public void isEmployeeExistsElseThrowExp(Long empId){
+        boolean empExists =  employeeRepository.existsById(empId);
+
+        if(!empExists)
+            throw new ResourceNotFoundException("Employee was not found in ID : "+empId);
+    }
+
+// ---------------------------------------APi Service Functions
 
     @Override
     public Optional<EmployeeDTO> getEmployeeById(Long empId) {
@@ -53,32 +68,38 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeDTO createNewEmployee(EmployeeDTO inputEmployeeDto) {
         Employee newEmployee = modelMapper.map(inputEmployeeDto, Employee.class);
         newEmployee =  employeeRepository.save(newEmployee);
+
         return modelMapper.map(newEmployee, EmployeeDTO.class);
     }
 
     @Override
     public EmployeeDTO updateEmployeeById(Long empId, EmployeeDTO newEmployeeDto) {
+//        Boolean isEmployeeExists = isEmployeeExistsById(empId);
+//        if (!isEmployeeExists)
+        isEmployeeExistsElseThrowExp(empId);
+
         Employee employee = modelMapper.map(newEmployeeDto, Employee.class);
         employee.setId(empId);
         employee = employeeRepository.save(employee);
+
         return modelMapper.map(employee, EmployeeDTO.class);
     }
 
     @Override
     public boolean deleteEmployeeById(Long empId) {
-        boolean empExists =  isEmployeeExistsById(empId);
-        if (empExists){
-            employeeRepository.deleteById(empId);
-        }
+//        boolean empExists =  isEmployeeExistsById(empId);
+//        if (!empExists)
+        isEmployeeExistsElseThrowExp(empId);
+        employeeRepository.deleteById(empId);
 
-        return empExists;
+        return true;
     }
 
     @Override
     public EmployeeDTO updatePartialEmployeeById(Long empId, Map<String, Object> updates) {
-        boolean empExists =  isEmployeeExistsById(empId);
-        if (!empExists)
-            return null;
+//        boolean empExists =  isEmployeeExistsById(empId);
+//        if (!empExists)
+        isEmployeeExistsElseThrowExp(empId);
 
         Employee employee = employeeRepository.findById(empId).get();
 

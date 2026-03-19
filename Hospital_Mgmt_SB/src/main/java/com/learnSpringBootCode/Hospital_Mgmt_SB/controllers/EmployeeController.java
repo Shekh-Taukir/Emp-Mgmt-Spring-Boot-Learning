@@ -2,6 +2,7 @@ package com.learnSpringBootCode.Hospital_Mgmt_SB.controllers;
 
 import com.learnSpringBootCode.Hospital_Mgmt_SB.dto.EmployeeDTO;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.entities.Employee;
+import com.learnSpringBootCode.Hospital_Mgmt_SB.exceptions.ResourceNotFoundException;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.repositories.EmployeeRepository;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.services.EmployeeService;
 import jakarta.validation.Valid;
@@ -13,10 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 @RequestMapping("/employees")
@@ -29,6 +27,11 @@ public class EmployeeController {
 //    }
 
     private final EmployeeService employeeService;
+
+//    @ExceptionHandler(NoSuchElementException.class)
+//    public ResponseEntity<String> handleEmployeeNotFound(NoSuchElementException exception){
+//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Employee was not found in requested employeeId");
+//    }
 
     //--------------API Definations
 
@@ -46,7 +49,8 @@ public class EmployeeController {
 
         return employeeDTO
                 .map(employeeDTO1 -> ResponseEntity.ok(employeeDTO1))
-                .orElse(ResponseEntity.notFound().build());
+                .orElseThrow(()->new ResourceNotFoundException("Employee was not found on id: "+empId));
+//                .orElse(ResponseEntity.notFound().build());
 
 //        if (employeeDTO==null)
 //            return ResponseEntity.notFound().build();
