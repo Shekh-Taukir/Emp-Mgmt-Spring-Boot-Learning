@@ -21,4 +21,9 @@ public class Employee {
     private Integer age;
     private LocalDateTime dateOfJoining;
     private Boolean isActive;
+
+    private String role;
+    private Integer salary;
+    private Double increment;
+
 }

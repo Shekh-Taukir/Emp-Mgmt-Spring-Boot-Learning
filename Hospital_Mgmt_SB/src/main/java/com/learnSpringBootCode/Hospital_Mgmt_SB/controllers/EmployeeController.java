@@ -4,9 +4,11 @@ import com.learnSpringBootCode.Hospital_Mgmt_SB.dto.EmployeeDTO;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.entities.Employee;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.repositories.EmployeeRepository;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.services.EmployeeService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -54,13 +56,13 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<EmployeeDTO> createNewEmployee(@RequestBody EmployeeDTO inputEmployeeDto){
+    public ResponseEntity<EmployeeDTO> createNewEmployee(@Valid @RequestBody EmployeeDTO inputEmployeeDto){
         return ResponseEntity.status(HttpStatus.CREATED).body(employeeService.createNewEmployee(inputEmployeeDto));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<EmployeeDTO> updateEmployeeById(@PathVariable("id") Long empId,
-                                                          @RequestBody EmployeeDTO newEmployeeDto){
+                                                          @Valid @RequestBody EmployeeDTO newEmployeeDto){
         return ResponseEntity.ok(employeeService.updateEmployeeById(empId, newEmployeeDto));
     }
 
