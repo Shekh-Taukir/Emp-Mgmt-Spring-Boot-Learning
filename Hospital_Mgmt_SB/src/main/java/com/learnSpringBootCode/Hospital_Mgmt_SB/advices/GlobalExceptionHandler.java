@@ -24,17 +24,18 @@ public class GlobalExceptionHandler {
 
      */
     @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ApiError> handleResourceNotFound(ResourceNotFoundException exception){
+    public ResponseEntity<ApiResponse<?>> handleResourceNotFound(ResourceNotFoundException exception){
         ApiError apiError = ApiError.builder()
                 .status(HttpStatus.NOT_FOUND)
                 .message(exception.getMessage())
                 .build();
 
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(apiError);
+        return buidErrorResponseEntity(apiError);
+//        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(apiError);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiError> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
+    public ResponseEntity<ApiResponse<?>> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception){
         List<String> errors =  exception.getBindingResult()
                 .getAllErrors()
                 .stream()
@@ -47,16 +48,23 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.BAD_REQUEST)
                 .build();
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(apiError);
+        return buidErrorResponseEntity(apiError);
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiError> handleInternalException(Exception exception){
+    public ResponseEntity<ApiResponse<?>> handleInternalException(Exception exception){
         ApiError apiError = ApiError.builder()
                 .message(exception.getMessage())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .build();
 
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(apiError);
+        return buidErrorResponseEntity(apiError);
+    }
+
+
+    //------------------------Internal Methods
+
+    private ResponseEntity<ApiResponse<?>> buidErrorResponseEntity(ApiError apiError) {
+        return ResponseEntity.status(apiError.getStatus()).body(new ApiResponse<>(apiError));
     }
 }

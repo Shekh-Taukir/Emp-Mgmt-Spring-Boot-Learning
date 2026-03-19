@@ -1197,3 +1197,277 @@ java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "i
 2026-03-19T12:46:47.420+08:00  INFO 38276 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2026-03-19T12:46:47.420+08:00  INFO 38276 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2026-03-19T12:46:47.422+08:00  INFO 38276 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-19T13:44:03.022+08:00  INFO 38276 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T13:44:03.040+08:00  INFO 38276 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T13:44:03.049+08:00  INFO 38276 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:44:03.057+08:00  INFO 38276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T13:44:03.060+08:00  INFO 38276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T13:44:05.626+08:00  INFO 1664 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 1664 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T13:44:05.629+08:00  INFO 1664 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T13:44:06.159+08:00  INFO 1664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T13:44:06.210+08:00  INFO 1664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
+2026-03-19T13:44:06.636+08:00  INFO 1664 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T13:44:06.646+08:00  INFO 1664 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T13:44:06.646+08:00  INFO 1664 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T13:44:06.695+08:00  INFO 1664 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1024 ms
+2026-03-19T13:44:06.860+08:00  INFO 1664 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T13:44:06.915+08:00  INFO 1664 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T13:44:07.305+08:00  INFO 1664 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T13:44:07.332+08:00  INFO 1664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T13:44:07.461+08:00  INFO 1664 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3add5e17
+2026-03-19T13:44:07.462+08:00  INFO 1664 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T13:44:07.513+08:00  INFO 1664 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T13:44:08.071+08:00  INFO 1664 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T13:44:08.117+08:00  INFO 1664 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:44:08.181+08:00  INFO 1664 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T13:44:08.290+08:00  WARN 1664 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T13:44:08.529+08:00  INFO 1664 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T13:44:08.534+08:00  INFO 1664 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 3.249 seconds (process running for 3.561)
+2026-03-19T13:45:31.651+08:00  INFO 1664 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T13:45:31.664+08:00  INFO 1664 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T13:45:31.665+08:00  INFO 1664 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:45:31.667+08:00  INFO 1664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T13:45:31.670+08:00  INFO 1664 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T13:45:32.994+08:00  INFO 40876 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 40876 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T13:45:32.996+08:00  INFO 40876 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T13:45:33.528+08:00  INFO 40876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T13:45:33.574+08:00  INFO 40876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2026-03-19T13:45:33.989+08:00  INFO 40876 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T13:45:34.000+08:00  INFO 40876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T13:45:34.000+08:00  INFO 40876 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T13:45:34.044+08:00  INFO 40876 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1004 ms
+2026-03-19T13:45:34.197+08:00  INFO 40876 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T13:45:34.233+08:00  INFO 40876 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T13:45:34.587+08:00  INFO 40876 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T13:45:34.613+08:00  INFO 40876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T13:45:34.730+08:00  INFO 40876 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6fb14
+2026-03-19T13:45:34.732+08:00  INFO 40876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T13:45:34.781+08:00  INFO 40876 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T13:45:35.338+08:00  INFO 40876 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T13:45:35.386+08:00  INFO 40876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:45:35.449+08:00  INFO 40876 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T13:45:35.548+08:00  WARN 40876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T13:45:35.785+08:00  INFO 40876 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T13:45:35.790+08:00  INFO 40876 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 3.152 seconds (process running for 3.458)
+2026-03-19T13:45:36.759+08:00  INFO 40876 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T13:45:36.770+08:00  INFO 40876 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T13:45:36.772+08:00  INFO 40876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:45:36.774+08:00  INFO 40876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T13:45:36.776+08:00  INFO 40876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T13:45:38.106+08:00  INFO 10988 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 10988 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T13:45:38.108+08:00  INFO 10988 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T13:45:38.608+08:00  INFO 10988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T13:45:38.655+08:00  INFO 10988 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-03-19T13:45:39.052+08:00  INFO 10988 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T13:45:39.064+08:00  INFO 10988 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T13:45:39.065+08:00  INFO 10988 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T13:45:39.113+08:00  INFO 10988 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 964 ms
+2026-03-19T13:45:39.265+08:00  INFO 10988 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T13:45:39.309+08:00  INFO 10988 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T13:45:39.658+08:00  INFO 10988 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T13:45:39.689+08:00  INFO 10988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T13:45:39.808+08:00  INFO 10988 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6fb14
+2026-03-19T13:45:39.809+08:00  INFO 10988 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T13:45:39.862+08:00  INFO 10988 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T13:45:40.408+08:00  INFO 10988 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T13:45:40.462+08:00  INFO 10988 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:45:40.537+08:00  INFO 10988 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T13:45:40.654+08:00  WARN 10988 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T13:45:40.945+08:00  INFO 10988 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T13:45:40.950+08:00  INFO 10988 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 3.195 seconds (process running for 3.51)
+2026-03-19T13:45:46.413+08:00  INFO 10988 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19T13:45:46.413+08:00  INFO 10988 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-19T13:45:46.414+08:00  INFO 10988 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-19T13:46:22.720+08:00  INFO 10988 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T13:46:22.733+08:00  INFO 10988 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T13:46:22.735+08:00  INFO 10988 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:46:22.738+08:00  INFO 10988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T13:46:22.741+08:00  INFO 10988 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T13:46:25.099+08:00  INFO 41772 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 41772 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T13:46:25.102+08:00  INFO 41772 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T13:46:25.616+08:00  INFO 41772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T13:46:25.666+08:00  INFO 41772 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2026-03-19T13:46:26.055+08:00  INFO 41772 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T13:46:26.067+08:00  INFO 41772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T13:46:26.067+08:00  INFO 41772 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T13:46:26.108+08:00  INFO 41772 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 966 ms
+2026-03-19T13:46:26.275+08:00  INFO 41772 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T13:46:26.316+08:00  INFO 41772 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T13:46:26.663+08:00  INFO 41772 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T13:46:26.690+08:00  INFO 41772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T13:46:26.806+08:00  INFO 41772 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6fb14
+2026-03-19T13:46:26.807+08:00  INFO 41772 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T13:46:26.850+08:00  INFO 41772 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T13:46:27.392+08:00  INFO 41772 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T13:46:27.435+08:00  INFO 41772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T13:46:27.493+08:00  INFO 41772 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T13:46:27.594+08:00  WARN 41772 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T13:46:27.958+08:00  INFO 41772 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T13:46:27.968+08:00  INFO 41772 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 3.201 seconds (process running for 3.496)
+2026-03-19T13:46:30.148+08:00  INFO 41772 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19T13:46:30.148+08:00  INFO 41772 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-19T13:46:30.149+08:00  INFO 41772 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-19T14:47:32.207+08:00  INFO 41772 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T14:47:32.229+08:00  INFO 41772 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T14:47:32.244+08:00  INFO 41772 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T14:47:32.262+08:00  INFO 41772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T14:47:32.266+08:00  INFO 41772 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T14:47:35.128+08:00  INFO 19068 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 19068 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T14:47:35.130+08:00  INFO 19068 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T14:47:35.690+08:00  INFO 19068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T14:47:35.746+08:00  INFO 19068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2026-03-19T14:47:36.183+08:00  INFO 19068 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T14:47:36.194+08:00  INFO 19068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T14:47:36.195+08:00  INFO 19068 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T14:47:36.246+08:00  INFO 19068 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1068 ms
+2026-03-19T14:47:36.437+08:00  INFO 19068 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T14:47:36.495+08:00  INFO 19068 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T14:47:36.934+08:00  INFO 19068 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T14:47:36.961+08:00  INFO 19068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T14:47:37.104+08:00  INFO 19068 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6fb14
+2026-03-19T14:47:37.105+08:00  INFO 19068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T14:47:37.180+08:00  INFO 19068 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T14:47:37.880+08:00  INFO 19068 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T14:47:37.940+08:00  INFO 19068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T14:47:37.997+08:00  INFO 19068 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T14:47:38.101+08:00  WARN 19068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T14:47:38.379+08:00  INFO 19068 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T14:47:38.385+08:00  INFO 19068 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 3.632 seconds (process running for 3.956)
+2026-03-19T14:47:45.800+08:00  INFO 19068 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19T14:47:45.801+08:00  INFO 19068 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-19T14:47:45.803+08:00  INFO 19068 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-19T14:52:46.702+08:00  INFO 19068 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T14:52:46.715+08:00  INFO 19068 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T14:52:46.718+08:00  INFO 19068 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T14:52:46.719+08:00  INFO 19068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T14:52:46.723+08:00  INFO 19068 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T14:52:49.251+08:00  INFO 4784 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 4784 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T14:52:49.256+08:00  INFO 4784 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T14:52:49.830+08:00  INFO 4784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T14:52:49.882+08:00  INFO 4784 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2026-03-19T14:52:50.316+08:00  INFO 4784 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T14:52:50.328+08:00  INFO 4784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T14:52:50.328+08:00  INFO 4784 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T14:52:50.382+08:00  INFO 4784 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1083 ms
+2026-03-19T14:52:50.604+08:00  INFO 4784 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T14:52:50.657+08:00  INFO 4784 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T14:52:51.037+08:00  INFO 4784 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T14:52:51.062+08:00  INFO 4784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T14:52:51.186+08:00  INFO 4784 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31b6fb14
+2026-03-19T14:52:51.188+08:00  INFO 4784 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T14:52:51.240+08:00  INFO 4784 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T14:52:51.902+08:00  INFO 4784 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T14:52:51.972+08:00  INFO 4784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T14:52:52.063+08:00  INFO 4784 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T14:52:52.267+08:00  WARN 4784 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T14:52:52.623+08:00  INFO 4784 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T14:52:52.636+08:00  INFO 4784 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 3.748 seconds (process running for 4.066)
+2026-03-19T14:52:53.973+08:00  INFO 4784 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19T14:52:53.973+08:00  INFO 4784 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-19T14:52:53.975+08:00  INFO 4784 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-03-19T14:53:12.041+08:00  INFO 4784 --- [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-19T14:53:12.054+08:00  INFO 4784 --- [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-19T14:53:12.056+08:00  INFO 4784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T14:53:12.058+08:00  INFO 4784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-19T14:53:12.060+08:00  INFO 4784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-19T14:53:15.459+08:00  INFO 18376 --- [main] c.l.Hospital_Mgmt_SB.Application         : Starting Application using Java 21.0.9 with PID 18376 (D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB\target\classes started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB)
+2026-03-19T14:53:15.463+08:00  INFO 18376 --- [main] c.l.Hospital_Mgmt_SB.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-03-19T14:53:16.050+08:00  INFO 18376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-19T14:53:16.099+08:00  INFO 18376 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2026-03-19T14:53:16.534+08:00  INFO 18376 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-19T14:53:16.557+08:00  INFO 18376 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-19T14:53:16.558+08:00  INFO 18376 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-19T14:53:16.612+08:00  INFO 18376 --- [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1104 ms
+2026-03-19T14:53:16.802+08:00  INFO 18376 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-19T14:53:16.875+08:00  INFO 18376 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-19T14:53:17.294+08:00  INFO 18376 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-19T14:53:17.329+08:00  INFO 18376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-19T14:53:17.469+08:00  INFO 18376 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@fde487b
+2026-03-19T14:53:17.471+08:00  INFO 18376 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-19T14:53:17.536+08:00  INFO 18376 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.4
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-19T14:53:18.455+08:00  INFO 18376 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-19T14:53:18.504+08:00  INFO 18376 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-19T14:53:18.579+08:00  INFO 18376 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-19T14:53:18.772+08:00  WARN 18376 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-19T14:53:19.315+08:00  INFO 18376 --- [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/api'
+2026-03-19T14:53:19.328+08:00  INFO 18376 --- [main] c.l.Hospital_Mgmt_SB.Application         : Started Application in 4.242 seconds (process running for 4.564)
+2026-03-19T14:53:20.112+08:00  INFO 18376 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-19T14:53:20.112+08:00  INFO 18376 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-19T14:53:20.114+08:00  INFO 18376 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
