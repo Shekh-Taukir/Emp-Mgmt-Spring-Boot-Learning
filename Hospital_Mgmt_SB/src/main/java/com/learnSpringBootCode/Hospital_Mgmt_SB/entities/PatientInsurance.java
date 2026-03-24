@@ -1,10 +1,7 @@
 package com.learnSpringBootCode.Hospital_Mgmt_SB.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
@@ -36,5 +33,6 @@ public class PatientInsurance {
     private LocalDateTime createdAt;
 
     @OneToOne(mappedBy = "insurance") //inverse side
+    @ToString.Exclude
     private Patient patient;
 }

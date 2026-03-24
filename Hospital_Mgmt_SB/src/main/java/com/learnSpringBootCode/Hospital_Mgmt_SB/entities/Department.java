@@ -1,10 +1,11 @@
 package com.learnSpringBootCode.Hospital_Mgmt_SB.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -23,15 +24,23 @@ public class Department {
     @Column(unique = true, nullable = false, length = 100)
     private String name;
 
-    @OneToOne
-    @JoinColumn(
-            nullable = false,
-            name = "head_doctor_id",
-            foreignKey = @ForeignKey(name = "fk_headdoc_department_mst_sb_doctor_mst_sb")
-    )
+    @OneToOne()
+    @OnDelete(action = OnDeleteAction.SET_NULL)
+    @JoinColumn(name = "head_doctor_id", foreignKey = @ForeignKey(name = "fk_headdoc_department_mst_sb_doctor_mst_sb"))
+    @ToString.Exclude
+    @JsonIgnore
     private Doctor headDoctor;
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    @JsonIgnore
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<Doctor> doctors = new HashSet<>();
+
+    @JsonProperty("headDoctorId")
+    @ToString.Include(name = "headDoctorId")
+    public Long getHeadDoctorId(){
+        return headDoctor.getId();
+    }
 
 }

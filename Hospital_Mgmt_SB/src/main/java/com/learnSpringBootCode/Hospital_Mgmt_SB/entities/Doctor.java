@@ -1,14 +1,14 @@
 package com.learnSpringBootCode.Hospital_Mgmt_SB.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Entity
@@ -31,6 +31,14 @@ public class Doctor {
     @Column(nullable = false, length = 100, unique = true)
     private String email;
 
-    @OneToMany(mappedBy = "doctor")
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.REMOVE)
+    @ToString.Exclude
+    @JsonIgnore
     private List<Appointment> appointments;
+
+    @ManyToMany(mappedBy = "doctors")
+    @ToString.Exclude
+    @JsonIgnore
+    @EqualsAndHashCode.Exclude
+    private Set<Department> departments = new HashSet<>();
 }

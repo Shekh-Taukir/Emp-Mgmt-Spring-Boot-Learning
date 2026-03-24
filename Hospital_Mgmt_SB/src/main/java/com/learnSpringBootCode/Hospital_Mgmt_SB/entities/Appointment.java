@@ -1,10 +1,8 @@
 package com.learnSpringBootCode.Hospital_Mgmt_SB.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -31,6 +29,7 @@ public class Appointment {
             foreignKey = @ForeignKey(name = "fk_appointment_mst_sb_patient_mst_sb"),
             nullable = false
     )
+    @ToString.Exclude
     private Patient patient;
 
     @ManyToOne //owning side
@@ -39,5 +38,18 @@ public class Appointment {
             foreignKey = @ForeignKey(name = "fk_appointment_mst_sb_doctor_mst_sb"),
             nullable = false
     )
+    @ToString.Exclude
     private Doctor doctor;
+
+    @JsonProperty("patientId")
+    @ToString.Include(name = "patientId")
+    public Long getPatientId(){
+        return patient.getId();
+    }
+
+    @JsonProperty("doctorId")
+    @ToString.Include(name = "doctorId")
+    public Long getDoctorId(){
+        return doctor.getId();
+    }
 }

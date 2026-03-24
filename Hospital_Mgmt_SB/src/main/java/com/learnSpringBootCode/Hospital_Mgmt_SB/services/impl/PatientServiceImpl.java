@@ -3,6 +3,7 @@ package com.learnSpringBootCode.Hospital_Mgmt_SB.services.impl;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.entities.Patient;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.repositories.PatientRepository;
 import com.learnSpringBootCode.Hospital_Mgmt_SB.services.PatientService;
+import com.learnSpringBootCode.Hospital_Mgmt_SB.services.helper.EntityFinder;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class PatientServiceImpl implements PatientService {
 
     private final PatientRepository patientRepository;
+    private EntityFinder entityFinder;
 
     @Transactional
     public void testPatientTransaction(){
@@ -24,5 +26,11 @@ public class PatientServiceImpl implements PatientService {
         System.out.println(p2);
 
         System.out.println(p1 == p2);
+    }
+
+    @Transactional
+    public void deletePatient(Long patientId){
+        Patient patient = entityFinder.findPatientOrThrowException(patientId);
+        patientRepository.delete(patient);
     }
 }

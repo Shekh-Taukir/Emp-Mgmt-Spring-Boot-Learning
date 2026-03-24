@@ -1,510 +1,165 @@
-2026-03-21T15:03:46.044+08:00  INFO 36584 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 36584 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:03:46.048+08:00  INFO 36584 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:03:46.479+08:00  INFO 36584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:03:46.530+08:00  INFO 36584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:03:46.869+08:00  INFO 36584 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:03:46.909+08:00  INFO 36584 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:03:47.368+08:00  INFO 36584 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:03:47.386+08:00  INFO 36584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:03:47.510+08:00  INFO 36584 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@467a2584
-2026-03-21T15:03:47.512+08:00  INFO 36584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:03:47.572+08:00  INFO 36584 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2026-03-24T00:09:51.592+08:00  INFO 32728 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Starting AppointmentTest using Java 21.0.9 with PID 32728 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
+2026-03-24T00:09:51.596+08:00  INFO 32728 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : No active profile set, falling back to 1 default profile: "default"
+2026-03-24T00:09:52.131+08:00  INFO 32728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24T00:09:52.194+08:00  INFO 32728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 7 JPA repository interfaces.
+2026-03-24T00:09:52.535+08:00  INFO 32728 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24T00:09:52.582+08:00  INFO 32728 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-24T00:09:53.059+08:00  INFO 32728 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24T00:09:53.094+08:00  INFO 32728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-24T00:09:53.226+08:00  INFO 32728 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55b74e6b
+2026-03-24T00:09:53.227+08:00  INFO 32728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-24T00:09:53.280+08:00  INFO 32728 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/learnSpringBoot_hospitalDB]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 17.4
-	Default catalog/schema: postgres/public
+	Default catalog/schema: learnSpringBoot_hospitalDB/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-03-21T15:03:48.224+08:00  INFO 36584 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:03:48.267+08:00  INFO 36584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:03:48.341+08:00  INFO 36584 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:03:48.984+08:00  WARN 36584 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:03:49.352+08:00  INFO 36584 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.54 seconds (process running for 4.423)
-2026-03-21T15:03:49.626+08:00  INFO 36584 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:03:49.627+08:00  INFO 36584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:03:49.633+08:00  INFO 36584 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:05:45.536+08:00  INFO 11744 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 11744 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:05:45.537+08:00  INFO 11744 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:05:46.003+08:00  INFO 11744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:05:46.051+08:00  INFO 11744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:05:46.390+08:00  INFO 11744 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:05:46.441+08:00  INFO 11744 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:05:46.888+08:00  INFO 11744 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:05:46.919+08:00  INFO 11744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:05:47.053+08:00  INFO 11744 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2919aff3
-2026-03-21T15:05:47.054+08:00  INFO 11744 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:05:47.116+08:00  INFO 11744 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2026-03-24T00:09:54.108+08:00  INFO 32728 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24T00:09:54.170+08:00  INFO 32728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:09:54.250+08:00  INFO 32728 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-24T00:09:55.317+08:00  WARN 32728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-24T00:09:55.745+08:00  INFO 32728 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Started AppointmentTest in 4.391 seconds (process running for 5.295)
+2026-03-24T00:09:56.128+08:00  WARN 32728 --- [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-03-24T00:09:56.128+08:00  WARN 32728 --- [main] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "doctor_mst_sb" violates foreign key constraint "fk_headdoc_department_mst_sb_doctor_mst_sb" on table "department_mst_sb"
+  Detail: Key (id)=(1) is still referenced from table "department_mst_sb".
+2026-03-24T00:09:56.157+08:00  INFO 32728 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:09:56.160+08:00  INFO 32728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-24T00:09:56.163+08:00  INFO 32728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-24T00:13:12.939+08:00  INFO 38892 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Starting AppointmentTest using Java 21.0.9 with PID 38892 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
+2026-03-24T00:13:12.940+08:00  INFO 38892 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : No active profile set, falling back to 1 default profile: "default"
+2026-03-24T00:13:13.418+08:00  INFO 38892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24T00:13:13.481+08:00  INFO 38892 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 7 JPA repository interfaces.
+2026-03-24T00:13:13.835+08:00  INFO 38892 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24T00:13:13.888+08:00  INFO 38892 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-24T00:13:14.339+08:00  INFO 38892 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24T00:13:14.370+08:00  INFO 38892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-24T00:13:14.629+08:00  INFO 38892 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70700b8a
+2026-03-24T00:13:14.630+08:00  INFO 38892 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-24T00:13:14.685+08:00  INFO 38892 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/learnSpringBoot_hospitalDB]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 17.4
-	Default catalog/schema: postgres/public
+	Default catalog/schema: learnSpringBoot_hospitalDB/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-03-21T15:05:47.829+08:00  INFO 11744 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:05:47.873+08:00  INFO 11744 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:05:47.936+08:00  INFO 11744 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:05:48.585+08:00  WARN 11744 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:05:48.944+08:00  INFO 11744 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.649 seconds (process running for 4.512)
-2026-03-21T15:05:49.323+08:00  INFO 11744 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:05:49.325+08:00  INFO 11744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:05:49.329+08:00  INFO 11744 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:10:57.201+08:00  INFO 33036 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 33036 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:10:57.202+08:00  INFO 33036 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:10:57.638+08:00  INFO 33036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:10:57.686+08:00  INFO 33036 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:10:58.005+08:00  INFO 33036 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:10:58.050+08:00  INFO 33036 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:10:58.470+08:00  INFO 33036 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:10:58.491+08:00  INFO 33036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:10:58.612+08:00  INFO 33036 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@de0c402
-2026-03-21T15:10:58.613+08:00  INFO 33036 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:10:58.662+08:00  INFO 33036 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2026-03-24T00:13:15.476+08:00  INFO 38892 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24T00:13:15.532+08:00  INFO 38892 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:13:15.610+08:00  INFO 38892 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-24T00:13:16.590+08:00  WARN 38892 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-24T00:13:17.028+08:00  INFO 38892 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Started AppointmentTest in 4.344 seconds (process running for 5.213)
+2026-03-24T00:13:17.464+08:00  WARN 38892 --- [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-03-24T00:13:17.464+08:00  WARN 38892 --- [main] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "doctor_mst_sb" violates foreign key constraint "fk_headdoc_department_mst_sb_doctor_mst_sb" on table "department_mst_sb"
+  Detail: Key (id)=(1) is still referenced from table "department_mst_sb".
+2026-03-24T00:13:17.490+08:00  INFO 38892 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:13:17.492+08:00  INFO 38892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-24T00:13:17.494+08:00  INFO 38892 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-24T00:16:51.560+08:00  INFO 42908 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Starting AppointmentTest using Java 21.0.9 with PID 42908 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
+2026-03-24T00:16:51.561+08:00  INFO 42908 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : No active profile set, falling back to 1 default profile: "default"
+2026-03-24T00:16:52.088+08:00  INFO 42908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24T00:16:52.148+08:00  INFO 42908 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 7 JPA repository interfaces.
+2026-03-24T00:16:52.500+08:00  INFO 42908 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24T00:16:52.549+08:00  INFO 42908 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-24T00:16:53.033+08:00  INFO 42908 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24T00:16:53.066+08:00  INFO 42908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-24T00:16:53.197+08:00  INFO 42908 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2bf4fa1
+2026-03-24T00:16:53.198+08:00  INFO 42908 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-24T00:16:53.257+08:00  INFO 42908 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/learnSpringBoot_hospitalDB]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 17.4
-	Default catalog/schema: postgres/public
+	Default catalog/schema: learnSpringBoot_hospitalDB/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-03-21T15:10:59.277+08:00  INFO 33036 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:10:59.318+08:00  INFO 33036 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:10:59.388+08:00  INFO 33036 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:11:00.144+08:00  WARN 33036 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:11:00.488+08:00  INFO 33036 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.512 seconds (process running for 4.365)
-2026-03-21T15:11:00.832+08:00  INFO 33036 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:11:00.833+08:00  INFO 33036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:11:00.837+08:00  INFO 33036 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:12:56.309+08:00  INFO 31232 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 31232 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:12:56.310+08:00  INFO 31232 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:12:56.753+08:00  INFO 31232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:12:56.798+08:00  INFO 31232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:12:57.135+08:00  INFO 31232 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:12:57.189+08:00  INFO 31232 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:12:57.614+08:00  INFO 31232 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:12:57.638+08:00  INFO 31232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:12:57.763+08:00  INFO 31232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@639948a2
-2026-03-21T15:12:57.764+08:00  INFO 31232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:12:57.814+08:00  INFO 31232 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2026-03-24T00:16:54.113+08:00  INFO 42908 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24T00:16:54.193+08:00  INFO 42908 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:16:54.322+08:00  INFO 42908 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-24T00:16:55.356+08:00  WARN 42908 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-24T00:16:55.857+08:00  INFO 42908 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Started AppointmentTest in 4.523 seconds (process running for 5.389)
+2026-03-24T00:16:56.238+08:00  WARN 42908 --- [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-03-24T00:16:56.238+08:00  WARN 42908 --- [main] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "doctor_mst_sb" violates foreign key constraint "fk_headdoc_department_mst_sb_doctor_mst_sb" on table "department_mst_sb"
+  Detail: Key (id)=(1) is still referenced from table "department_mst_sb".
+2026-03-24T00:16:56.269+08:00  INFO 42908 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:16:56.274+08:00  INFO 42908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-24T00:16:56.278+08:00  INFO 42908 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-24T00:17:44.767+08:00  INFO 41064 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Starting AppointmentTest using Java 21.0.9 with PID 41064 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
+2026-03-24T00:17:44.768+08:00  INFO 41064 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : No active profile set, falling back to 1 default profile: "default"
+2026-03-24T00:17:45.302+08:00  INFO 41064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24T00:17:45.364+08:00  INFO 41064 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 7 JPA repository interfaces.
+2026-03-24T00:17:45.740+08:00  INFO 41064 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24T00:17:45.786+08:00  INFO 41064 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-24T00:17:46.264+08:00  INFO 41064 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24T00:17:46.295+08:00  INFO 41064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-24T00:17:46.528+08:00  INFO 41064 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4895e8f6
+2026-03-24T00:17:46.529+08:00  INFO 41064 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-24T00:17:46.582+08:00  INFO 41064 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/learnSpringBoot_hospitalDB]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 17.4
-	Default catalog/schema: postgres/public
+	Default catalog/schema: learnSpringBoot_hospitalDB/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-03-21T15:12:58.466+08:00  INFO 31232 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:12:58.511+08:00  INFO 31232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:12:58.584+08:00  INFO 31232 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:12:59.394+08:00  WARN 31232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:12:59.756+08:00  INFO 31232 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.676 seconds (process running for 4.501)
-2026-03-21T15:13:00.095+08:00  INFO 31232 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:13:00.096+08:00  INFO 31232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:13:00.100+08:00  INFO 31232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:16:34.588+08:00  INFO 12924 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 12924 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:16:34.589+08:00  INFO 12924 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:16:35.031+08:00  INFO 12924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:16:35.073+08:00  INFO 12924 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:16:35.389+08:00  INFO 12924 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:16:35.437+08:00  INFO 12924 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:16:35.876+08:00  INFO 12924 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:16:35.903+08:00  INFO 12924 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:16:36.029+08:00  INFO 12924 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@de0c402
-2026-03-21T15:16:36.030+08:00  INFO 12924 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:16:36.083+08:00  INFO 12924 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+2026-03-24T00:17:47.416+08:00  INFO 41064 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24T00:17:47.475+08:00  INFO 41064 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:17:47.547+08:00  INFO 41064 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-24T00:17:48.613+08:00  WARN 41064 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-24T00:17:49.172+08:00  INFO 41064 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Started AppointmentTest in 4.664 seconds (process running for 5.557)
+2026-03-24T00:17:49.487+08:00  WARN 41064 --- [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-03-24T00:17:49.487+08:00  WARN 41064 --- [main] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "doctor_mst_sb" violates foreign key constraint "fk_headdoc_department_mst_sb_doctor_mst_sb" on table "department_mst_sb"
+  Detail: Key (id)=(1) is still referenced from table "department_mst_sb".
+2026-03-24T00:17:49.513+08:00  INFO 41064 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:17:49.515+08:00  INFO 41064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-24T00:17:49.518+08:00  INFO 41064 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-24T00:18:22.793+08:00  INFO 49712 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Starting AppointmentTest using Java 21.0.9 with PID 49712 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
+2026-03-24T00:18:22.795+08:00  INFO 49712 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : No active profile set, falling back to 1 default profile: "default"
+2026-03-24T00:18:23.331+08:00  INFO 49712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24T00:18:23.387+08:00  INFO 49712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 7 JPA repository interfaces.
+2026-03-24T00:18:23.772+08:00  INFO 49712 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-24T00:18:23.823+08:00  INFO 49712 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-24T00:18:24.280+08:00  INFO 49712 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-24T00:18:24.307+08:00  INFO 49712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-24T00:18:24.423+08:00  INFO 49712 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4895e8f6
+2026-03-24T00:18:24.424+08:00  INFO 49712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-24T00:18:24.472+08:00  INFO 49712 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/learnSpringBoot_hospitalDB]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
 	Database version: 17.4
-	Default catalog/schema: postgres/public
+	Default catalog/schema: learnSpringBoot_hospitalDB/public
 	Autocommit mode: undefined/unknown
 	Isolation level: READ_COMMITTED [default READ_COMMITTED]
 	JDBC fetch size: none
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-03-21T15:16:36.670+08:00  INFO 12924 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:16:36.710+08:00  INFO 12924 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:16:36.769+08:00  INFO 12924 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:16:37.546+08:00  WARN 12924 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:16:37.922+08:00  INFO 12924 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.565 seconds (process running for 4.394)
-2026-03-21T15:16:38.281+08:00  INFO 12924 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:16:38.283+08:00  INFO 12924 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:16:38.288+08:00  INFO 12924 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:18:57.574+08:00  INFO 15412 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 15412 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:18:57.575+08:00  INFO 15412 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:18:58.016+08:00  INFO 15412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:18:58.061+08:00  INFO 15412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:18:58.378+08:00  INFO 15412 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:18:58.423+08:00  INFO 15412 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:18:58.833+08:00  INFO 15412 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:18:58.858+08:00  INFO 15412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:18:58.980+08:00  INFO 15412 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@639948a2
-2026-03-21T15:18:58.981+08:00  INFO 15412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:18:59.030+08:00  INFO 15412 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T15:18:59.644+08:00  INFO 15412 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:18:59.691+08:00  INFO 15412 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:18:59.759+08:00  INFO 15412 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:19:00.480+08:00  WARN 15412 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:19:00.853+08:00  INFO 15412 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.519 seconds (process running for 4.334)
-2026-03-21T15:19:01.152+08:00  INFO 15412 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:19:01.155+08:00  INFO 15412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:19:01.162+08:00  INFO 15412 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:31:14.985+08:00  INFO 34660 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 34660 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:31:14.986+08:00  INFO 34660 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:31:15.455+08:00  INFO 34660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:31:15.500+08:00  INFO 34660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:31:15.845+08:00  INFO 34660 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:31:15.889+08:00  INFO 34660 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:31:16.327+08:00  INFO 34660 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:31:16.353+08:00  INFO 34660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:31:16.470+08:00  INFO 34660 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@9d2af36
-2026-03-21T15:31:16.471+08:00  INFO 34660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:31:16.515+08:00  INFO 34660 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T15:31:17.116+08:00  INFO 34660 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:31:17.160+08:00  INFO 34660 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:31:17.235+08:00  INFO 34660 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:31:17.983+08:00  WARN 34660 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:31:18.332+08:00  INFO 34660 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.578 seconds (process running for 4.444)
-2026-03-21T15:31:18.649+08:00  INFO 34660 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:31:18.650+08:00  INFO 34660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:31:18.653+08:00  INFO 34660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:32:10.178+08:00  INFO 16724 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 16724 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:32:10.180+08:00  INFO 16724 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:32:10.621+08:00  INFO 16724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:32:10.670+08:00  INFO 16724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:32:10.996+08:00  INFO 16724 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:32:11.042+08:00  INFO 16724 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:32:11.462+08:00  INFO 16724 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:32:11.485+08:00  INFO 16724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:32:11.606+08:00  INFO 16724 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@de0c402
-2026-03-21T15:32:11.606+08:00  INFO 16724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:32:11.653+08:00  INFO 16724 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T15:32:12.293+08:00  INFO 16724 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:32:12.334+08:00  INFO 16724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:32:12.404+08:00  INFO 16724 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:32:13.274+08:00  WARN 16724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:32:13.687+08:00  INFO 16724 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.743 seconds (process running for 4.595)
-2026-03-21T15:32:14.010+08:00  INFO 16724 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:32:14.013+08:00  INFO 16724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:32:14.016+08:00  INFO 16724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T15:38:38.432+08:00  INFO 29760 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 29760 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T15:38:38.433+08:00  INFO 29760 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T15:38:38.891+08:00  INFO 29760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T15:38:38.936+08:00  INFO 29760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
-2026-03-21T15:38:39.281+08:00  INFO 29760 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T15:38:39.331+08:00  INFO 29760 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T15:38:39.780+08:00  INFO 29760 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T15:38:39.806+08:00  INFO 29760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T15:38:40.043+08:00  INFO 29760 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@740ad32e
-2026-03-21T15:38:40.043+08:00  INFO 29760 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T15:38:40.095+08:00  INFO 29760 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T15:38:40.739+08:00  INFO 29760 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T15:38:40.784+08:00  INFO 29760 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:38:40.842+08:00  INFO 29760 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T15:38:41.665+08:00  WARN 29760 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T15:38:42.024+08:00  INFO 29760 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.827 seconds (process running for 4.655)
-2026-03-21T15:38:42.357+08:00  INFO 29760 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T15:38:42.360+08:00  INFO 29760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T15:38:42.363+08:00  INFO 29760 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T16:42:42.666+08:00  INFO 26912 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 26912 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T16:42:42.667+08:00  INFO 26912 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T16:42:43.135+08:00  INFO 26912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T16:42:43.181+08:00  INFO 26912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
-2026-03-21T16:42:43.535+08:00  INFO 26912 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T16:42:43.609+08:00  INFO 26912 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T16:42:44.047+08:00  INFO 26912 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T16:42:44.082+08:00  INFO 26912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T16:42:44.215+08:00  INFO 26912 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19f1be04
-2026-03-21T16:42:44.216+08:00  INFO 26912 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T16:42:44.278+08:00  INFO 26912 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T16:42:44.948+08:00  INFO 26912 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T16:42:44.999+08:00  INFO 26912 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T16:42:45.066+08:00  INFO 26912 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T16:42:45.914+08:00  WARN 26912 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T16:42:46.293+08:00  INFO 26912 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.872 seconds (process running for 4.771)
-2026-03-21T16:42:46.639+08:00  INFO 26912 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T16:42:46.641+08:00  INFO 26912 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T16:42:46.645+08:00  INFO 26912 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T16:58:05.714+08:00  INFO 35608 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 35608 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T16:58:05.715+08:00  INFO 35608 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T16:58:06.173+08:00  INFO 35608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T16:58:06.222+08:00  INFO 35608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
-2026-03-21T16:58:06.553+08:00  INFO 35608 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T16:58:06.622+08:00  INFO 35608 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T16:58:07.047+08:00  INFO 35608 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T16:58:07.070+08:00  INFO 35608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T16:58:07.187+08:00  INFO 35608 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@19f1be04
-2026-03-21T16:58:07.189+08:00  INFO 35608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T16:58:07.234+08:00  INFO 35608 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T16:58:07.860+08:00  INFO 35608 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T16:58:07.902+08:00  INFO 35608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T16:58:07.973+08:00  INFO 35608 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T16:58:08.880+08:00  WARN 35608 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T16:58:09.243+08:00  INFO 35608 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.761 seconds (process running for 4.593)
-2026-03-21T16:58:09.559+08:00  INFO 35608 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T16:58:09.562+08:00  INFO 35608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T16:58:09.566+08:00  INFO 35608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T17:00:20.951+08:00  INFO 31128 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 31128 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T17:00:20.953+08:00  INFO 31128 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T17:00:21.429+08:00  INFO 31128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T17:00:21.479+08:00  INFO 31128 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
-2026-03-21T17:00:21.812+08:00  INFO 31128 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T17:00:21.858+08:00  INFO 31128 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T17:00:22.254+08:00  INFO 31128 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T17:00:22.284+08:00  INFO 31128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T17:00:22.418+08:00  INFO 31128 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3eadad14
-2026-03-21T17:00:22.420+08:00  INFO 31128 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T17:00:22.477+08:00  INFO 31128 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T17:00:23.147+08:00  INFO 31128 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T17:00:23.198+08:00  INFO 31128 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:00:23.270+08:00  INFO 31128 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T17:00:24.198+08:00  WARN 31128 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T17:00:24.627+08:00  INFO 31128 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.904 seconds (process running for 4.806)
-2026-03-21T17:00:25.083+08:00  INFO 31128 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:00:25.085+08:00  INFO 31128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T17:00:25.089+08:00  INFO 31128 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T17:02:12.780+08:00  INFO 23732 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 23732 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T17:02:12.781+08:00  INFO 23732 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T17:02:13.259+08:00  INFO 23732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T17:02:13.312+08:00  INFO 23732 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 3 JPA repository interfaces.
-2026-03-21T17:02:13.687+08:00  INFO 23732 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T17:02:13.741+08:00  INFO 23732 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T17:02:14.162+08:00  INFO 23732 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T17:02:14.187+08:00  INFO 23732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T17:02:14.321+08:00  INFO 23732 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@de0c402
-2026-03-21T17:02:14.322+08:00  INFO 23732 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T17:02:14.377+08:00  INFO 23732 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T17:02:15.067+08:00  INFO 23732 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T17:02:15.117+08:00  INFO 23732 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:02:15.185+08:00  INFO 23732 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T17:02:16.133+08:00  WARN 23732 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T17:02:16.553+08:00  INFO 23732 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 4.021 seconds (process running for 4.925)
-2026-03-21T17:02:17.023+08:00  INFO 23732 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:02:17.026+08:00  INFO 23732 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T17:02:17.030+08:00  INFO 23732 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T17:02:36.868+08:00  INFO 37256 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 37256 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T17:02:36.869+08:00  INFO 37256 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T17:02:37.354+08:00  INFO 37256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T17:02:37.403+08:00  INFO 37256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
-2026-03-21T17:02:37.752+08:00  INFO 37256 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T17:02:37.794+08:00  INFO 37256 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T17:02:38.237+08:00  INFO 37256 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T17:02:38.270+08:00  INFO 37256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T17:02:38.408+08:00  INFO 37256 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@de0c402
-2026-03-21T17:02:38.409+08:00  INFO 37256 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T17:02:38.480+08:00  INFO 37256 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T17:02:39.123+08:00  INFO 37256 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T17:02:39.170+08:00  INFO 37256 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:02:39.246+08:00  INFO 37256 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T17:02:40.131+08:00  WARN 37256 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T17:02:40.559+08:00  INFO 37256 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.929 seconds (process running for 4.833)
-2026-03-21T17:02:40.991+08:00  INFO 37256 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:02:40.992+08:00  INFO 37256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T17:02:40.996+08:00  INFO 37256 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T17:27:11.685+08:00  INFO 13724 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 13724 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T17:27:11.686+08:00  INFO 13724 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T17:27:12.155+08:00  INFO 13724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T17:27:12.208+08:00  INFO 13724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
-2026-03-21T17:27:12.584+08:00  INFO 13724 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T17:27:12.634+08:00  INFO 13724 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T17:27:13.082+08:00  INFO 13724 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T17:27:13.111+08:00  INFO 13724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T17:27:13.246+08:00  INFO 13724 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f563f96
-2026-03-21T17:27:13.248+08:00  INFO 13724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T17:27:13.311+08:00  INFO 13724 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T17:27:13.980+08:00  INFO 13724 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T17:27:14.029+08:00  INFO 13724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:27:14.112+08:00  INFO 13724 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T17:27:15.015+08:00  WARN 13724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T17:27:15.424+08:00  INFO 13724 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 4.007 seconds (process running for 4.95)
-2026-03-21T17:27:15.862+08:00  INFO 13724 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T17:27:15.864+08:00  INFO 13724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T17:27:15.867+08:00  INFO 13724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T23:44:39.481+08:00  INFO 34668 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 34668 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T23:44:39.482+08:00  INFO 34668 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T23:44:39.966+08:00  INFO 34668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T23:44:40.016+08:00  INFO 34668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
-2026-03-21T23:44:40.377+08:00  INFO 34668 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T23:44:40.441+08:00  INFO 34668 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T23:44:40.887+08:00  INFO 34668 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T23:44:40.910+08:00  INFO 34668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T23:44:41.041+08:00  INFO 34668 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4acc27fd
-2026-03-21T23:44:41.042+08:00  INFO 34668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T23:44:41.125+08:00  INFO 34668 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T23:44:41.814+08:00  INFO 34668 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T23:44:41.877+08:00  INFO 34668 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T23:44:41.939+08:00  INFO 34668 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T23:44:42.769+08:00  WARN 34668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T23:44:43.125+08:00  INFO 34668 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.891 seconds (process running for 4.835)
-2026-03-21T23:44:43.496+08:00  INFO 34668 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T23:44:43.498+08:00  INFO 34668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T23:44:43.502+08:00  INFO 34668 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-03-21T23:45:42.722+08:00  INFO 40008 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Starting PatientServiceTest using Java 21.0.9 with PID 40008 (started by tauki in D:\New learning codes\SpringBoot Code\anujSharma\CodingShuttleProject\Hospital_Mgmt_SB\Hospital_Mgmt_SB)
-2026-03-21T23:45:42.723+08:00  INFO 40008 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : No active profile set, falling back to 1 default profile: "default"
-2026-03-21T23:45:43.166+08:00  INFO 40008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-21T23:45:43.213+08:00  INFO 40008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
-2026-03-21T23:45:43.538+08:00  INFO 40008 --- [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-03-21T23:45:43.579+08:00  INFO 40008 --- [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
-2026-03-21T23:45:44.007+08:00  INFO 40008 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-21T23:45:44.029+08:00  INFO 40008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-21T23:45:44.151+08:00  INFO 40008 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71d0b8a4
-2026-03-21T23:45:44.152+08:00  INFO 40008 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-21T23:45:44.208+08:00  INFO 40008 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.4
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-03-21T23:45:44.826+08:00  INFO 40008 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-21T23:45:44.870+08:00  INFO 40008 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T23:45:44.942+08:00  INFO 40008 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-21T23:45:45.819+08:00  WARN 40008 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-21T23:45:46.182+08:00  INFO 40008 --- [main] c.l.Hospital_Mgmt_SB.PatientServiceTest  : Started PatientServiceTest in 3.689 seconds (process running for 4.539)
-2026-03-21T23:45:46.617+08:00  INFO 40008 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-21T23:45:46.619+08:00  INFO 40008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-03-21T23:45:46.622+08:00  INFO 40008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-24T00:18:25.287+08:00  INFO 49712 --- [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-24T00:18:25.339+08:00  INFO 49712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:18:25.396+08:00  INFO 49712 --- [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-24T00:18:26.352+08:00  WARN 49712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-24T00:18:26.733+08:00  INFO 49712 --- [main] c.l.Hospital_Mgmt_SB.AppointmentTest     : Started AppointmentTest in 4.194 seconds (process running for 5.073)
+2026-03-24T00:18:27.076+08:00  WARN 49712 --- [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23503
+2026-03-24T00:18:27.076+08:00  WARN 49712 --- [main] org.hibernate.orm.jdbc.error             : ERROR: update or delete on table "doctor_mst_sb" violates foreign key constraint "fk_headdoc_department_mst_sb_doctor_mst_sb" on table "department_mst_sb"
+  Detail: Key (id)=(1) is still referenced from table "department_mst_sb".
+2026-03-24T00:18:27.108+08:00  INFO 49712 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T00:18:27.110+08:00  INFO 49712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-24T00:18:27.114+08:00  INFO 49712 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
