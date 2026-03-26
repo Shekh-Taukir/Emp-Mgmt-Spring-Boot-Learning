@@ -1,8 +1,10 @@
 package com.learnSpringBootCode.Hospital_Mgmt_SB.advices;
 
 import com.learnSpringBootCode.Hospital_Mgmt_SB.exceptions.ResourceNotFoundException;
+import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -58,6 +60,15 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .build();
 
+        return buidErrorResponseEntity(apiError);
+    }
+
+    @ExceptionHandler(UsernameNotFoundException.class)
+    public ResponseEntity<ApiResponse<?>> handleUsernameNotFoundException(Exception exception){
+        ApiError apiError = ApiError.builder()
+                .message(exception.getMessage())
+                .status(HttpStatus.FORBIDDEN)
+                .build();
         return buidErrorResponseEntity(apiError);
     }
 

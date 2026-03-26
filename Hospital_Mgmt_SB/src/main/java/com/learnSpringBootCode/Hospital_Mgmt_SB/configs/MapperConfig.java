@@ -1,8 +1,17 @@
 package com.learnSpringBootCode.Hospital_Mgmt_SB.configs;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 @Configuration
 public class MapperConfig {
@@ -10,5 +19,42 @@ public class MapperConfig {
     @Bean
     public ModelMapper getModelMapper(){
         return new ModelMapper();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception{
+        return authenticationConfiguration.getAuthenticationManager();
+    }
+
+
+//    @Bean
+    UserDetailsService userDetailsService() {
+
+//        private final PasswordEncoder passwordEncoder;
+
+        UserDetails user1 = User
+                .withUsername("system")
+                .password(passwordEncoder().encode("admin"))
+                .roles("ADMIN")
+                .build();
+
+        UserDetails user2 = User
+                .withUsername("patient")
+                .password(passwordEncoder().encode("patient"))
+                .roles("PATIENT")
+                .build();
+
+        UserDetails user3 = User
+                .withUsername("user")
+                .password(passwordEncoder().encode("user"))
+                .roles("USER")
+                .build();
+
+        return new InMemoryUserDetailsManager(user1, user2);
     }
 }

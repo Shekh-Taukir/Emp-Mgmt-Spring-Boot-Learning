@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @RestController
-@RequestMapping("/employees")
+@RequestMapping("/public/employees")
 @AllArgsConstructor
 public class EmployeeController {
 
