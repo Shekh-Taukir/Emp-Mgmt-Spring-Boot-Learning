@@ -38,7 +38,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             }
 
             String token = requestTokenHeader.split("Bearer ")[1];
-            String username = authUtil.getUsernameFromToken(token);
+            String username = authUtil.determineProviderIdFromOAuth2User(token);
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                 User user = userRepository.findByUsername(username).orElseThrow();
